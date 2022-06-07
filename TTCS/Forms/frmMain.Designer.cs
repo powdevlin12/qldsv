@@ -61,9 +61,13 @@
             this.barButton_Logout = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBackUp = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_CauHinh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.TableManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableManager)).BeginInit();
@@ -121,6 +125,7 @@
             this.ribbonPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage2.ImageOptions.Image")));
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "BÁO CÁO";
+            this.ribbonPage2.Visible = false;
             // 
             // ribbonPageGroup2
             // 
@@ -179,6 +184,7 @@
             this.barButton_DSDHP.ItemAppearance.Normal.Options.UseFont = true;
             this.barButton_DSDHP.LargeWidth = 120;
             this.barButton_DSDHP.Name = "barButton_DSDHP";
+            this.barButton_DSDHP.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButton_DSDHP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButton_DSDHP_ItemClick);
             // 
             // ribbonPage1
@@ -268,6 +274,7 @@
             this.barButtonItem_ChuyenLop.ItemAppearance.Normal.Options.UseFont = true;
             this.barButtonItem_ChuyenLop.LargeWidth = 75;
             this.barButtonItem_ChuyenLop.Name = "barButtonItem_ChuyenLop";
+            this.barButtonItem_ChuyenLop.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem_ChuyenLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ChuyenLop_ItemClick);
             // 
             // barBtnHocPhi
@@ -365,10 +372,13 @@
             this.barButtonItem_SinhVien,
             this.barButtonItem_Diem,
             this.barButtonItem_ChuyenLop,
-            this.barBtnHocPhi});
+            this.barBtnHocPhi,
+            this.barButtonItem5,
+            this.btnBackUp,
+            this.btnRestore});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl1.MaxItemId = 26;
+            this.ribbonControl1.MaxItemId = 30;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -414,6 +424,30 @@
             this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.Name = "barButtonItem4";
             // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Backup";
+            this.barButtonItem5.Id = 26;
+            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
+            // btnBackUp
+            // 
+            this.btnBackUp.Caption = "Backup";
+            this.btnBackUp.Id = 28;
+            this.btnBackUp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBackUp.ImageOptions.Image")));
+            this.btnBackUp.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBackUp.ImageOptions.LargeImage")));
+            this.btnBackUp.Name = "btnBackUp";
+            // 
+            // btnRestore
+            // 
+            this.btnRestore.Caption = "Restore";
+            this.btnRestore.Id = 29;
+            this.btnRestore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRestore.ImageOptions.Image")));
+            this.btnRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRestore.ImageOptions.LargeImage")));
+            this.btnRestore.Name = "btnRestore";
+            // 
             // ribbonPage4
             // 
             this.ribbonPage4.Appearance.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -434,6 +468,14 @@
             // TableManager
             // 
             this.TableManager.MdiParent = this;
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "Restore";
+            this.barButtonItem6.Id = 27;
+            this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
+            this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.barButtonItem6.Name = "barButtonItem6";
             // 
             // frmMain
             // 
@@ -500,6 +542,10 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem_Diem;
         private DevExpress.XtraBars.BarButtonItem barButtonItem_ChuyenLop;
         private DevExpress.XtraBars.BarButtonItem barBtnHocPhi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem btnBackUp;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem btnRestore;
     }
 }
 

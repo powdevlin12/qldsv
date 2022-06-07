@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,6 @@ namespace QLDSV
 
                 this.barButton_DSDHP.Enabled = true;
                 this.barButton_DSSV.Enabled = false;
-                this.barButton_DSTHM.Enabled = false;
                 this.barButton_BDMH.Enabled = false;
                 this.barButton_PD.Enabled = false;
             }
