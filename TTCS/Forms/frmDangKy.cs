@@ -23,7 +23,7 @@ namespace QLDSV.Forms
 
 
             // khoa chỉ được quyền đăng ký cho khoa
-            if (Program.MGroup == Program.NhomQuyen[1])
+            if (Program.MGroup.ToUpper() == Program.NhomQuyen[1].ToUpper())
             {
                 rdoKhoa.Checked = true;
                 rdoPGV.Enabled = rdoPKeToan.Enabled = false;
