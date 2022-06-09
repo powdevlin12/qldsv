@@ -28,7 +28,7 @@ namespace QLDSV.Forms
                 rdoKhoa.Checked = true;
                 rdoPGV.Enabled = rdoPKeToan.Enabled = false;
             } // học phí chỉ được quyền đăng ký cho học phí
-            else if (Program.MGroup == Program.NhomQuyen[2])
+            else if (Program.MGroup.ToUpper() == Program.NhomQuyen[2].ToUpper())
             {
                 rdoPKeToan.Checked = true;
                 rdoPGV.Enabled = rdoKhoa.Enabled = false;
@@ -77,7 +77,7 @@ namespace QLDSV.Forms
 
          
             // trường hợp tạo tài khoản cho pketoan thì phải dùng LINK1,LINK2 để link tới Site 3 tạo tài khoản cho pKeToan
-            if (role == (Program.NhomQuyen[2]) && Program.ServerName == ((DataRowView)Program.Bds_Dspm[0])["TENSERVER"].ToString())
+            if (role == (Program.NhomQuyen[2]))
             {
                 // site 1 ---> sử dụng LINK2
                 subLenh = " EXEC    @return_value = LINK2.QLDSV.[dbo].[SP_TAOLOGIN] " +
@@ -86,16 +86,7 @@ namespace QLDSV.Forms
                             " @PASS = N'" + pass + "', " +
                             " @USERNAME = N'" + user + "', " +
                             " @ROLE = N'" + role + "' ";
-            } else if (role == (Program.NhomQuyen[2]) && Program.ServerName == ((DataRowView)Program.Bds_Dspm[1])["TENSERVER"].ToString())
-
-            {
-                subLenh = " EXEC    @return_value = LINK1.QLDSV.[dbo].[SP_TAOLOGIN] " +
-
-                           " @LGNAME = N'" + login + "', " +
-                           " @PASS = N'" + pass + "', " +
-                           " @USERNAME = N'" + user + "', " +
-                           " @ROLE = N'" + role + "' ";
-            }
+            } 
 
             // trường hợp tạo tài khoản cho chỉ khoa và pgv
 
