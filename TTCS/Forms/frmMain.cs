@@ -207,6 +207,11 @@ namespace QLDSV
         {
             ShowMdiChildren(typeof(frmRestore));
         }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(frmRole));
+        }
     }
 }
 

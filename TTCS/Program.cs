@@ -79,7 +79,7 @@ namespace QLDSV
                 Program.Conn.Close();
             try
             {
-                Program.URL_Connect = "Data Source= DESKTOP-8P7BSI8;Initial Catalog=" +
+                Program.URL_Connect = "Data Source= HP_PAVILION;Initial Catalog=" +
                       Program.Database + ";User ID=" +
                       Program.MLogin + ";Password=" + Program.MPassword;
                 Program.Conn.ConnectionString = Program.URL_Connect;

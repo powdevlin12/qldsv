@@ -22,7 +22,7 @@ namespace QLDSV
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            string chuoiketnoi = "Data Source=DESKTOP-8P7BSI8;Initial Catalog=" + Program.Database + ";Integrated Security=True";
+            string chuoiketnoi = "Data Source=HP_PAVILION;Initial Catalog=" + Program.Database + ";Integrated Security=True";
 
             Program.Conn.ConnectionString = chuoiketnoi;
         }
