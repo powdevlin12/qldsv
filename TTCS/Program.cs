@@ -137,7 +137,27 @@ namespace QLDSV
             Conn.Close();
             return dt;
         }
+        public static int ExecSqlNonQuery(String strlenh)
+        {
+            SqlCommand Sqlcmd = new SqlCommand(strlenh, Conn);
+            Sqlcmd.CommandType = CommandType.Text;
+            Sqlcmd.CommandTimeout = 600;// 10 phut
+            if (Conn.State == ConnectionState.Closed) Conn.Open();
+            try
+            {
+                Sqlcmd.ExecuteNonQuery();
+                Conn.Close();
+                return 0;
+            }
+            catch (SqlException ex)
+            {
+                XtraMessageBox.Show(ex.Message, "Error Message",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Conn.Close();
+                return ex.State;
 
+            }
+        }
         [STAThread]
         static void Main()
         {

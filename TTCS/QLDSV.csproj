@@ -87,6 +87,12 @@
     <Compile Include="Forms\frmBackUp.Designer.cs">
       <DependentUpon>frmBackUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmBackupAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBackupAuto.Designer.cs">
+      <DependentUpon>frmBackupAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmChuyenLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="Forms\frmHocPhi.Designer.cs">
       <DependentUpon>frmHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRestore.Designer.cs">
+      <DependentUpon>frmRestore.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmSinhVien.cs">
       <SubType>Form</SubType>
@@ -216,6 +228,12 @@
       <DependentUpon>XtraReport_PD.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="Forms\frmBackUp.resx">
+      <DependentUpon>frmBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBackupAuto.resx">
+      <DependentUpon>frmBackupAuto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChuyenLop.resx">
       <DependentUpon>frmChuyenLop.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHocPhi.resx">
       <DependentUpon>frmHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRestore.resx">
+      <DependentUpon>frmRestore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
