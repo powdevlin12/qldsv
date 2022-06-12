@@ -44,7 +44,17 @@ namespace QLDSV
                 this.barButton_DSDHP.Enabled = false;
                 this.barBtnHocPhi.Enabled = false;
             }
-
+            if (Program.MGroup == Program.NhomQuyen[3])
+            {
+                this.ribbonPage1.Visible = false;
+                this.ribbonPage2.Visible = false;
+            }
+            else
+            {
+                this.ribbonPageGroup1.Visible = this.ribbonPageGroup3.Visible = false;
+                this.barButtonItem12.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            } 
+                
         }
         // TODO : HANDLE CONTROL CHILDREN
         private void ShowMdiChildren(Type fType)
