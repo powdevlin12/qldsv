@@ -123,6 +123,12 @@
     <Compile Include="Forms\frmRestore.Designer.cs">
       <DependentUpon>frmRestore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRole.Designer.cs">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRestore.resx">
       <DependentUpon>frmRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRole.resx">
+      <DependentUpon>frmRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>

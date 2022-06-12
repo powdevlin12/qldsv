@@ -68,7 +68,7 @@ namespace QLDSV
         public static frmDangNhap FrmDangNhap;
 
         // lưu danh sách các nhóm quyền
-        public static string[] NhomQuyen = new string[3] {"PGV", "KHOA", "PKeToan"};
+        public static string[] NhomQuyen = new string[4] {"PGV", "KHOA", "PKeToan","ADMIN"};
        
 
         // hàm thực hiện kết nối tới Database
