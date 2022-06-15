@@ -520,7 +520,7 @@
             // 
             // barButtonItem13
             // 
-            this.barButtonItem13.Caption = "Đổi mật khẩu";
+            this.barButtonItem13.Caption = "Login";
             this.barButtonItem13.Id = 36;
             this.barButtonItem13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
             this.barButtonItem13.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));

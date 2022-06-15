@@ -33,6 +33,19 @@ namespace QLDSV.Forms
                 rdoPKeToan.Checked = true;
                 rdoPGV.Enabled = rdoKhoa.Enabled = false;
             }
+
+            SqlDataReader myreader = Program.ExecSqlDataReader("select * from v_getRoles");
+            cmbRole.Items.Clear();
+            while (myreader.Read())
+            {
+                string name = myreader.GetString(0);
+                cmbRole.Items.Add(name);
+
+            }
+            cmbRole.SelectedIndex = 0;
+            myreader.Close();
+
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -67,13 +80,13 @@ namespace QLDSV.Forms
             String pass = txtPass.Text;
             String user = (String)lookUpUser.EditValue;
             String role = rdoKhoa.Checked ? Program.NhomQuyen[1] : (rdoPGV.Checked ? Program.NhomQuyen[0] : Program.NhomQuyen[2]);
-
+            String role1 = cmbRole.Text;
             String subLenh = " EXEC    @return_value = [dbo].[SP_TAOLOGIN] " +
 
                             " @LGNAME = N'" + login + "', " +
                             " @PASS = N'" + pass + "', " +
                             " @USERNAME = N'" + user + "', " +
-                            " @ROLE = N'" + role + "' ";
+                            " @ROLE = N'" + role1 + "' ";
 
          
             // trường hợp tạo tài khoản cho pketoan thì phải dùng LINK1,LINK2 để link tới Site 3 tạo tài khoản cho pKeToan
@@ -85,7 +98,7 @@ namespace QLDSV.Forms
                             " @LGNAME = N'" + login + "', " +
                             " @PASS = N'" + pass + "', " +
                             " @USERNAME = N'" + user + "', " +
-                            " @ROLE = N'" + role + "' ";
+                            " @ROLE = N'" + role1 + "' ";
             } 
 
             // trường hợp tạo tài khoản cho chỉ khoa và pgv
@@ -190,11 +203,7 @@ namespace QLDSV.Forms
             }
 
             // check khoảng trống ở radiobutton
-            if (!isEmptyorNullRadioButtons())
-            {
-                isValid = false;
-            }
-
+           
             // login không được chứa khoảng trống
             if (txtLogin.Text.Contains(" "))
             {

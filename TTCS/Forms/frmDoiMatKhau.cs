@@ -73,7 +73,7 @@ namespace QLDSV.Forms
             String sqlCode = "exec SP_Lay_Thong_Tin " + txtLoginName.Text ;
             SqlDataReader myReader = Program.ExecSqlDataReader(sqlCode);
             myReader.Read();
-            string userName = myReader.GetString(0).ToString();
+            string userName = myReader.GetString(0);
             myReader.Close();
 
             sqlCode = "exec Xoa_Login " + txtLoginName.Text + " , " + userName;
