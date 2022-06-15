@@ -222,6 +222,11 @@ namespace QLDSV
         {
             ShowMdiChildren(typeof(frmRole));
         }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowMdiChildren(typeof(frmDoiMatKhau));
+        }
     }
 }
 

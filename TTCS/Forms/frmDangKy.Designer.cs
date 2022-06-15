@@ -53,6 +53,8 @@
             this.DSGVTableAdapter = new QLDSV.DSTableAdapters.GETDSGVTableAdapter();
             this.tableAdapterManager = new QLDSV.DSTableAdapters.TableAdapterManager();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.grbDangKy.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnRole)).BeginInit();
@@ -79,6 +81,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.cmbRole);
             this.panel1.Controls.Add(this.pnRole);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
@@ -89,6 +92,7 @@
             this.panel1.Controls.Add(this.txtConfirm);
             this.panel1.Controls.Add(this.txtLogin);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblConfirm);
             this.panel1.Controls.Add(this.label3);
@@ -107,6 +111,7 @@
             this.pnRole.Name = "pnRole";
             this.pnRole.Size = new System.Drawing.Size(203, 50);
             this.pnRole.TabIndex = 23;
+            this.pnRole.Visible = false;
             // 
             // rdoPGV
             // 
@@ -262,6 +267,7 @@
             this.label1.Size = new System.Drawing.Size(35, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Role";
+            this.label1.Visible = false;
             // 
             // lblConfirm
             // 
@@ -317,6 +323,24 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // cmbRole
+            // 
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Location = new System.Drawing.Point(90, 351);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(203, 21);
+            this.cmbRole.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 353);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 15);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Role";
+            // 
             // frmDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,5 +393,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.PanelControl pnRole;
+        private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.Label label6;
     }
 }
