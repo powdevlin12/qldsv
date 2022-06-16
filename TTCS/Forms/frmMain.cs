@@ -49,11 +49,11 @@ namespace QLDSV
                 this.ribbonPage1.Visible = false;
                 this.ribbonPage2.Visible = false;
             }
-            else
+            /*else
             {
-                this.ribbonPageGroup1.Visible = this.ribbonPageGroup3.Visible = false;
+                this.rpgBackup.Visible = this.rpgRole.Visible = false;
                 this.barButtonItem12.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            } 
+            } */
                 
         }
         // TODO : HANDLE CONTROL CHILDREN
