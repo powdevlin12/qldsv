@@ -73,8 +73,8 @@
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_CauHinh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgBackup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgRole = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.TableManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.statusStrip.SuspendLayout();
@@ -89,9 +89,9 @@
             this.lblMAGV,
             this.lblHOTEN,
             this.lblNHOM});
-            this.statusStrip.Location = new System.Drawing.Point(0, 447);
+            this.statusStrip.Location = new System.Drawing.Point(0, 441);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1011, 24);
+            this.statusStrip.Size = new System.Drawing.Size(1011, 30);
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip";
             // 
@@ -99,7 +99,7 @@
             // 
             this.lblMAGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblMAGV.Name = "lblMAGV";
-            this.lblMAGV.Size = new System.Drawing.Size(41, 19);
+            this.lblMAGV.Size = new System.Drawing.Size(51, 24);
             this.lblMAGV.Text = "MAGV";
             this.lblMAGV.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -109,7 +109,7 @@
             this.lblHOTEN.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.lblHOTEN.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.lblHOTEN.Name = "lblHOTEN";
-            this.lblHOTEN.Size = new System.Drawing.Size(50, 19);
+            this.lblHOTEN.Size = new System.Drawing.Size(61, 24);
             this.lblHOTEN.Text = "HOTEN";
             // 
             // lblNHOM
@@ -118,7 +118,7 @@
             this.lblNHOM.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.lblNHOM.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.lblNHOM.Name = "lblNHOM";
-            this.lblNHOM.Size = new System.Drawing.Size(49, 19);
+            this.lblNHOM.Size = new System.Drawing.Size(59, 24);
             this.lblNHOM.Text = "NHOM";
             // 
             // ribbonPage3
@@ -401,7 +401,7 @@
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage4});
-            this.ribbonControl1.Size = new System.Drawing.Size(1011, 177);
+            this.ribbonControl1.Size = new System.Drawing.Size(1011, 209);
             // 
             // barButton_Register
             // 
@@ -533,8 +533,8 @@
             this.ribbonPage4.Appearance.Options.UseFont = true;
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup_CauHinh,
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup3});
+            this.rpgBackup,
+            this.rpgRole});
             this.ribbonPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage4.ImageOptions.Image")));
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "CẤU HÌNH";
@@ -546,19 +546,19 @@
             this.ribbonPageGroup_CauHinh.Name = "ribbonPageGroup_CauHinh";
             this.ribbonPageGroup_CauHinh.Text = "HỆ THỐNG";
             // 
-            // ribbonPageGroup1
+            // rpgBackup
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem9);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "BACKUP";
+            this.rpgBackup.ItemLinks.Add(this.barButtonItem7);
+            this.rpgBackup.ItemLinks.Add(this.barButtonItem9);
+            this.rpgBackup.Name = "rpgBackup";
+            this.rpgBackup.Text = "BACKUP";
             // 
-            // ribbonPageGroup3
+            // rpgRole
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem10);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem12);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.rpgRole.ItemLinks.Add(this.barButtonItem10);
+            this.rpgRole.ItemLinks.Add(this.barButtonItem13);
+            this.rpgRole.ItemLinks.Add(this.barButtonItem12);
+            this.rpgRole.Name = "rpgRole";
             // 
             // TableManager
             // 
@@ -577,7 +577,7 @@
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 471);
             this.Controls.Add(this.statusStrip);
@@ -643,10 +643,10 @@
         private DevExpress.XtraBars.BarButtonItem btnRestore;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgBackup;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgRole;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
